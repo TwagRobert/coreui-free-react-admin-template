@@ -19,6 +19,7 @@ const Progress = React.lazy(() => import('./views/base/progress/Progress'))
 const Spinners = React.lazy(() => import('./views/base/spinners/Spinners'))
 const Tables = React.lazy(() => import('./views/base/tables/Tables'))
 const Tooltips = React.lazy(() => import('./views/base/tooltips/Tooltips'))
+const AllTenants = React.lazy(() => import('./views/tenants/AllTenants'))
 
 // Buttons
 const Buttons = React.lazy(() => import('./views/buttons/buttons/Buttons'))
@@ -95,6 +96,10 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
+
+
+  { path: '/tenants', name: 'Tenants', element: AllTenants, exact: true },
+  { path: '/tenants/all_tenants', name: 'All tenants', element: AllTenants },
 ]
 
 export default routes
